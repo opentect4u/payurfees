@@ -1,0 +1,305 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>PayUrFees</title>
+        <link type="text/css" href="bootstrap/css/bootstrap.min.css" rel="stylesheet">
+        <link type="text/css" href="bootstrap/css/bootstrap-responsive.min.css" rel="stylesheet">
+        <link type="text/css" href="css/theme.css" rel="stylesheet">
+        <link type="text/css" href="images/icons/css/font-awesome.css" rel="stylesheet">
+        <link type="text/css" href='http://fonts.googleapis.com/css?family=Open+Sans:400italic,600italic,400,600'
+            rel='stylesheet'>
+    </head>
+    <body>
+        <div class="navbar navbar-fixed-top">
+            <div class="navbar-inner">
+                <div class="container">
+                    <a class="btn btn-navbar" data-toggle="collapse" data-target=".navbar-inverse-collapse">
+                        <i class="icon-reorder shaded"></i></a><a class="brand" href="index.html"><img src="images/logo.png" alt="" /></a>
+                    <div class="nav-collapse collapse navbar-inverse-collapse">
+                        <ul class="nav nav-icons">
+                            <!--<li class="active"><a href="#"><i class="icon-envelope"></i></a></li>-->
+                            <li><a href="#"><i class="icon-eye-open"></i></a></li>
+                            <li><a href="#"><i class="icon-bar-chart"></i></a></li>
+                        </ul>
+                       <!-- <form class="navbar-search pull-left input-append" action="#">
+                        <input type="text" class="span3">
+                        <button class="btn" type="button">
+                            <i class="icon-search"></i>
+                        </button>
+                        </form>-->
+                        <ul class="nav pull-right">
+                            <!--<li class="dropdown"><a href="#" class="dropdown-toggle" data-toggle="dropdown">Dropdown
+                                <b class="caret"></b></a>
+                                <ul class="dropdown-menu">
+                                    <li><a href="#">Item No. 1</a></li>
+                                    <li><a href="#">Don't Click</a></li>
+                                    <li class="divider"></li>
+                                    <li class="nav-header">Example Header</li>
+                                    <li><a href="#">A Separated link</a></li>
+                                </ul>
+                            </li>-->
+                            <li><a href="#">Logged in as Institute </a></li>
+                            <li class="nav-user dropdown"><a href="#" class="dropdown-toggle" data-toggle="dropdown">
+                                <img src="images/user.png" class="nav-avatar" />
+                                <b class="caret"></b></a>
+                                <ul class="dropdown-menu">
+                                    <li><a href="#">Your Profile</a></li>
+                                    <li><a href="#">Edit Profile</a></li>
+                                    <!--<li><a href="#">Account Settings</a></li>-->
+                                    <li class="divider"></li>
+                                    <li><a href="#">Logout</a></li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </div>
+                    <!-- /.nav-collapse -->
+                </div>
+            </div>
+            <!-- /navbar-inner -->
+        </div>
+        <!-- /navbar -->
+        <div class="wrapper">
+            <div class="container">
+                <div class="row">
+                    <div class="span3">
+                        <div class="sidebar">
+                            <ul class="widget widget-menu unstyled">
+                                <li class="active"><a href="index.html"><i class="menu-icon icon-dashboard"></i>Dashboard
+                                </a></li>
+                                <li><a href="#"><i class="menu-icon icon-user"></i>My Profile</a></li>
+                                <li><a href="#"><i class="menu-icon icon-plus"></i>Add Student<b class="label green pull-right">11</b> </a></li>
+                                <li><a href="#"><i class="menu-icon icon-refresh"></i>Manage Student<!-- <b class="label orange pull-right">19</b>--> </a></li>
+                                <li><a href="#"><i class="menu-icon icon-plus"></i>Add Fees<b class="label orange pull-right">05</b> </a></li>
+<li><a href="#"><i class="menu-icon icon-refresh"></i>Manage Fees</a></li>
+                                
+<li><a href="#"><i class="menu-icon icon-plus"></i>Add Course<b class="label green pull-right">25</b> </a></li>
+<li><a href="#"><i class="menu-icon icon-refresh"></i>Manage Course</a></li>
+
+
+                            </ul>
+                            <!--/.widget-nav-->
+                            
+                           
+                            <!--/.widget-nav-->
+                            <ul class="widget widget-menu unstyled">
+                                <li><a class="collapsed" data-toggle="collapse" href="#togglePages"><i class="menu-icon icon-cog">
+                                </i><i class="icon-chevron-down pull-right"></i><i class="icon-chevron-up pull-right">
+                                </i>More Options </a>
+                                    <ul id="togglePages" class="collapse unstyled">
+                                    <li><a href="#"><i class="menu-icon icon-plus"></i>Add Sub Course </a></li>
+<li><a href="#"><i class="menu-icon icon-refresh"></i>Manage Sub Course</a></li>
+                                        <li><a href="#"><i class="menu-icon icon-plus"></i>Upload CSV Student </a></li>
+<li><a href="#"><i class="menu-icon icon-refresh"></i>Manage Fee Type</a></li>
+
+<li><a href="#"><i class="menu-icon icon-plus"></i>Add Fee Type<b class="label orange pull-right">5</b> </a></li>
+<li><a href="#"><i class="menu-icon icon-refresh"></i>Manage Sub Course</a></li>
+                                    </ul>
+                                </li>
+                                <li><a href="#"><i class="menu-icon icon-signout"></i>Logout </a></li>
+                            </ul>
+                        </div>
+                        <!--/.sidebar-->
+                    </div>
+                    <!--/.span3-->
+                    <div class="span9">
+                        <div class="content">
+                            
+                          
+						<div class="module">
+							<div class="module-head">
+								<h2>Manage Student</h2>
+							</div>
+							<div class="module-body">
+							<div class="module-body table">
+							
+							
+<table border="0" cellpadding="2" cellspacing="2" align="center" width="100%">
+<form name="aa" action="manage_student.php" method="post">
+
+<tr style="">
+<td><input type="text" name="name" placeholder="Name" /></td>
+<td><input type="text" name="roll_no" placeholder="Roll No." /></td>
+<td><input type="text" name="reg_no" placeholder="Registration No." /></td>
+<td><button type="submit" class="btn">Submit Form</button></td>
+</tr>
+</form>
+</table>
+
+
+
+
+
+
+<hr>
+<table cellpadding="0" cellspacing="0" border="0" class="table table-bordered table-striped	 display" width="100%">
+<thead>
+<tr>
+<th>Sl No.</th>
+<th>Name</th>
+<th>Roll No.</th>
+<th>Class</th>
+<th>Reg No.</th>
+<th>Course </th>
+<th>Sub-Course </th>
+<th>Fee Code</th>
+<th>Action</th>
+</tr>
+</thead>
+
+<tbody>
+<tr class="odd gradeX">
+<td align="center">1</td>
+<td align="center">Somnath Chakrabory</td>
+<td align="center">DDG-17-18-0001</td>
+<td align="center">x</td>
+<td align="center"></td>
+<td align="center">Pure Science</td>
+<td align="center"></td>
+<td align="center">
+</td>
+<td align="center"><a href="#"><i class="menu-icon icon-pencil"></i></a> | <a href="#" style="color:#FF0000"><i class="menu-icon icon-remove"></i></a></td>
+</tr>
+<tr>
+<td align="center">2</td>
+<td align="center">Anjali Sen</td>
+<td align="center">DDG-17-18-0036</td>
+<td align="center">X</td>
+<td align="center">DDGH-1718/002263</td>
+<td align="center">Secondary</td>
+<td align="center"></td>
+<td align="center">1001
+</td>
+<td align="center"><a href="#"><i class="menu-icon icon-pencil"></i></a> | <a href="#" style="color:#FF0000"><i class="menu-icon icon-remove"></i></a></td>
+</tr>
+<tr>
+<td align="center">3</td>
+<td align="center">Aratrika Mondal</td>
+<td align="center">DDG-17-18-0035</td>
+<td align="center">XII</td>
+<td align="center">DDGHS/1718/002262</td>
+<td align="center">Higher Secondary</td>
+<td align="center">Arts</td>
+<td align="center">1002
+</td>
+<td align="center"><a href="#"><i class="menu-icon icon-pencil"></i></a> | <a href="#" style="color:#FF0000"><i class="menu-icon icon-remove"></i></a></td>
+</tr>
+<tr>
+<td align="center">4</td>
+<td align="center">Bisu Bag</td>
+<td align="center">12</td>
+<td align="center">XII</td>
+<td align="center"></td>
+<td align="center">Higher Secondary</td>
+<td align="center">Bio Science</td>
+<td align="center">1002
+</td>
+<td align="center"><a href="#"><i class="menu-icon icon-pencil"></i></a> | <a href="#" style="color:#FF0000"><i class="menu-icon icon-remove"></i></a></td>
+</tr>
+<tr>
+<td align="center">5</td>
+<td align="center">Amitesh Das</td>
+<td align="center">12</td>
+<td align="center">XII</td>
+<td align="center"></td>
+<td align="center">Play School</td>
+<td align="center"></td>
+<td align="center">1003
+</td>
+<td align="center"><a href="#"><i class="menu-icon icon-pencil"></i></a> | <a href="#" style="color:#FF0000"><i class="menu-icon icon-remove"></i></a></td>
+</tr>
+<tr>
+<td align="center">6</td>
+<td align="center">Sauparna</td>
+<td align="center">DDG-17-18-0031</td>
+<td align="center">II</td>
+<td align="center"></td>
+<td align="center">Higher Secondary</td>
+<td align="center"></td>
+<td align="center">1002
+</td>
+<td align="center"><a href="#"><i class="menu-icon icon-pencil"></i></a> | <a href="#" style="color:#FF0000"><i class="menu-icon icon-remove"></i></a></td>
+</tr>
+<tr>
+<td align="center">7</td>
+<td align="center">Sanai Mondal</td>
+<td align="center">DDG-17-18-0030</td>
+<td align="center">V</td>
+<td align="center"></td>
+<td align="center">Junior</td>
+<td align="center"></td>
+<td align="center">
+</td>
+<td align="center"><a href="#"><i class="menu-icon icon-pencil"></i></a> | <a href="#" style="color:#FF0000"><i class="menu-icon icon-remove"></i></a></td>
+</tr>
+<tr>
+<td align="center">8</td>
+<td align="center">Kalyan Dutta</td>
+<td align="center">DDG-17-18-0025</td>
+<td align="center">XII</td>
+<td align="center"></td>
+<td align="center">Higher Secondary</td>
+<td align="center"></td>
+<td align="center">1002
+</td>
+<td align="center"><a href="#"><i class="menu-icon icon-pencil"></i></a> | <a href="#" style="color:#FF0000"><i class="menu-icon icon-remove"></i></a></td>
+</tr>
+<tr>
+<td align="center">9</td>
+<td align="center">Rupak Halder</td>
+<td align="center">DDG-17-18-0020</td>
+<td align="center">V</td>
+<td align="center"></td>
+<td align="center">Higher Secondary</td>
+<td align="center"></td>
+<td align="center">1002
+</td>
+<td align="center"><a href="#"><i class="menu-icon icon-pencil"></i></a> | <a href="#" style="color:#FF0000"><i class="menu-icon icon-remove"></i></a></td>
+</tr>
+<tr>
+<td align="center">10</td>
+<td align="center">Joydeep Ghosh</td>
+<td align="center">DDG-17-18-0010</td>
+<td align="center">IX</td>
+<td align="center"></td>
+<td align="center">Higher Secondary</td>
+<td align="center">Pure Science</td>
+<td align="center">1002
+</td>
+<td align="center"><a href="#"><i class="menu-icon icon-pencil"></i></a> | <a href="#" style="color:#FF0000"><i class="menu-icon icon-remove"></i></a></td>
+</tr>
+</tbody>
+</table>
+									
+									
+									</div>
+							</div>
+						</div>
+
+                      
+                                                 
+                        </div>
+                        <!--/.content-->
+                    </div>
+                    <!--/.span9-->
+                </div>
+            </div>
+            <!--/.container-->
+        </div>
+        <!--/.wrapper-->
+        <div class="footer">
+            <div class="container">
+                <b class="copyright">&copy; 2018 payurfees.com  </b> All rights reserved. |  <b class="pull-right">Design by: <a href="">WEBSYS</a></b> 
+            </div>
+        </div>
+        <script src="scripts/jquery-1.9.1.min.js" type="text/javascript"></script>
+        <script src="scripts/jquery-ui-1.10.1.custom.min.js" type="text/javascript"></script>
+        <script src="bootstrap/js/bootstrap.min.js" type="text/javascript"></script>
+        <script src="scripts/flot/jquery.flot.js" type="text/javascript"></script>
+        <script src="scripts/flot/jquery.flot.resize.js" type="text/javascript"></script>
+        <script src="scripts/datatables/jquery.dataTables.js" type="text/javascript"></script>
+        <script src="scripts/common.js" type="text/javascript"></script>
+      
+    </body>
